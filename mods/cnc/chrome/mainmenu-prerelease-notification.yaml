@@ -1,0 +1,96 @@
+Container@MAINMENU_PRERELEASE_NOTIFICATION:
+	Width: WINDOW_RIGHT
+	Height: WINDOW_BOTTOM
+	Logic: PreReleaseWarningPrompt
+	Children:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+				StopMusicKey: StopMusic
+				PauseMusicKey: PauseMusic
+				PrevMusicKey: PrevMusic
+				NextMusicKey: NextMusic
+				TakeScreenshotKey: TakeScreenshot
+				MuteAudioKey: ToggleMute
+		Container@SHELLMAP_DECORATIONS:
+			Children:
+				Image@NOD:
+					X: WINDOW_RIGHT / 2 - 384
+					Y: (WINDOW_BOTTOM - 256) / 2
+					ImageCollection: logos
+					ImageName: nod-load
+				Image@GDI:
+					X: WINDOW_RIGHT / 2 + 128
+					Y: (WINDOW_BOTTOM - 256) / 2
+					ImageCollection: logos
+					ImageName: gdi-load
+		Image@EVA:
+			X: WINDOW_RIGHT - 128 - 43
+			Y: 43
+			Width: 128
+			Height: 64
+			ImageCollection: logos
+			ImageName: eva
+		Label@VERSION_LABEL:
+			X: WINDOW_RIGHT - 128 - 43
+			Y: 116
+			Width: 128
+			Align: Center
+			Shadow: true
+		Background@BORDER:
+			Width: WINDOW_RIGHT
+			Height: WINDOW_BOTTOM
+			Background: shellmapborder
+		Container@dialog:
+			X: (WINDOW_RIGHT - WIDTH) / 2
+			Y: (WINDOW_BOTTOM - HEIGHT) / 2
+			Width: 550
+			Height: 155
+			Children:
+				Label@TITLE:
+					Width: PARENT_RIGHT
+					Y: 0 - 25
+					Font: BigBold
+					Contrast: true
+					Align: Center
+					Text: Tiberian Dawn: Remastered preview
+				Background@bg:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Background: panel-black
+					Children:
+						Label@PROMPT_TEXT_A:
+							X: 15
+							Y: 15
+							Width: PARENT_RIGHT - 30
+							Height: 16
+							Align: Center
+							Text: This pre-release build is made available as a proof of concept demonstrating
+						Label@PROMPT_TEXT_B:
+							X: 15
+							Y: 15+18
+							Width: PARENT_RIGHT - 30
+							Height: 16
+							Align: Center
+							Text: the capabilities of OpenRA using the C&C Remastered Collection assets.
+						Label@PROMPT_TEXT_C:
+							X: 15
+							Y: 15+3*18
+							Width: PARENT_RIGHT - 30
+							Height: 16
+							Align: Center
+							Text: Performance, memory usage, and loading times have not been optimized, and do
+						Label@PROMPT_TEXT_D:
+							X: 15
+							Y: 15+4*18
+							Width: PARENT_RIGHT - 30
+							Height: 16
+							Align: Center
+							Text: not reflect the expected final requirements. A dedicated GPU is recommended.
+				Button@CONTINUE_BUTTON:
+					X: PARENT_RIGHT - WIDTH
+					Y: PARENT_BOTTOM - 1
+					Width: 140
+					Height: 35
+					Text: I Understand
+					Font: Bold
+					Key: return

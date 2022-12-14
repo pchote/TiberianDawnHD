@@ -1,0 +1,63 @@
+c17:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\C17.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: c17icnh.shp
+
+tran:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\TRAN.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor: DATA\ART\TEXTURES\SRGB\COMMON\VFX\LROTOR.ZIP
+		Length: 4
+	rotor2: DATA\ART\TEXTURES\SRGB\COMMON\VFX\RROTOR.ZIP
+		Length: 4
+	slow-rotor: DATA\ART\TEXTURES\SRGB\COMMON\VFX\LROTOR.ZIP
+		Start: 4
+		Length: 8
+	slow-rotor2: DATA\ART\TEXTURES\SRGB\COMMON\VFX\RROTOR.ZIP
+		Start: 4
+		Length: 8
+	open:
+		Start: 32
+		Length: 4
+	unload:
+		Start: 35
+	icon: tranicnh.tem
+
+heli:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\HELI.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	rotor: DATA\ART\TEXTURES\SRGB\COMMON\VFX\LROTOR.ZIP
+		Length: 4
+	slow-rotor: DATA\ART\TEXTURES\SRGB\COMMON\VFX\LROTOR.ZIP
+		Start: 4
+		Length: 8
+	muzzle: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	icon: heliicnh.tem
+
+orca:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\ORCA.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	move:
+		Start: 32
+		Facings: 32
+	icon: orcaicnh.tem
+
+a10:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\A10.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	icon: a10icnh.tem

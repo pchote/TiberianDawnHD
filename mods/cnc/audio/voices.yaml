@@ -1,0 +1,102 @@
+GenericVoice:
+	Variants:
+		nod: .V01_EN-US.WAV, .V03_EN-US.WAV
+		gdi: .V01_EN-US.WAV, .V03_EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_UNT_
+		gdi: EN-US\TDR_SFX_UNT_
+	Voices:
+		Select: ACKNO, AWAIT1, READY, REPORT1, YESSIR1
+		Action: AFFIRM1, RITAWAY, UGOTIT, ROGER, MOVOUT1
+		Attack: AFFIRM1, RITAWAY, UGOTIT, NOPROB, YESSIR1
+		Die: NUYELL1, NUYELL3, NUYELL4, NUYELL5, NUYELL6
+		Burned: YELL1
+		Zapped: NUYELL3
+		Poisoned: NUYELL12
+	DisableVariants: Die, Burned, Zapped, Poisoned
+
+VehicleVoice:
+	Variants:
+		nod: .V00_EN-US.WAV, .V02_EN-US.WAV
+		gdi: .V00_EN-US.WAV, .V02_EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_UNT_
+		gdi: EN-US\TDR_SFX_UNT_
+	Voices:
+		Select: VEHIC1, YESSIR1, AWAIT1, UNIT1, REPORT1
+		Action: ACKNO, AFFIRM1, MOVOUT1
+		Attack: ACKNO, AFFIRM1, YESSIR1
+		Unload: MOVOUT1, AFFIRM1
+
+CivilianMaleVoice:
+	Variants:
+		nod: _EN-US.WAV
+		gdi: _EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_UNT_
+		gdi: EN-US\TDR_SFX_UNT_
+	Voices:
+		Select: GUYYEAH1
+		Action: GUYOKAY1
+		Die: NUYELL1, NUYELL3, NUYELL4, NUYELL5, NUYELL6
+		Burned: YELL1
+		Zapped: NUYELL3
+		Poisoned: NUYELL12
+
+CivilianFemaleVoice:
+	Variants:
+		nod: _EN-US.WAV
+		gdi: _EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_UNT_
+		gdi: EN-US\TDR_SFX_UNT_
+	Voices:
+		Select: GIRLYEAH
+		Action: GIRLOKAY
+		Die: NUYELL1, NUYELL3, NUYELL4, NUYELL5, NUYELL6
+		Burned: YELL1
+		Zapped: NUYELL3
+		Poisoned: NUYELL12
+
+MoebiusVoice:
+	Variants:
+		nod: _EN-US.WAV
+		gdi: _EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_UNT_
+		gdi: EN-US\TDR_SFX_UNT_
+	Voices:
+		Select: MCOMND1, MHELLO1, MYES1, MHMMM1
+		Action: MYESYES1, MCOURSE1, MTHANKS1, MTIBER1, MPLAN3
+		Die: NUYELL1, NUYELL3, NUYELL4, NUYELL5, NUYELL6
+		Burned: YELL1
+		Zapped: NUYELL3
+		Poisoned: NUYELL12
+
+CommandoVoice:
+	Variants:
+		nod: _EN-US.WAV
+		gdi: _EN-US.WAV
+	Prefixes:
+		nod: EN-US\TDR_SFX_CMD_
+		gdi: EN-US\TDR_SFX_CMD_
+	Voices:
+		Select: YEAH1, YES1, YO1
+		Action: ONIT1, GOTIT1, NOPRBLM1
+		Demolish: BOMBIT1
+		Die: RAMYELL1
+		Burned: RAMYELL1
+		Zapped: RAMYELL1
+		Poisoned: RAMYELL1
+		Build: ROKROLL1, CMON1
+		Kill: KEEPEM1, LAUGH1, LEFTY1, TUFFGUY1
+
+DinoVoice:
+	Voices:
+		Select: dinoyes
+		Move: dinomout
+		Attack: dinoatk1
+		Die: dinodie1
+		Burned: dinodie1
+		Zapped: dinodie1
+		Poisoned: dinodie1

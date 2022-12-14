@@ -1,0 +1,101 @@
+steg:
+	Defaults: steg.shp
+		Scale: 5.3333
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+	attack:
+		Start: 80
+		Length: 12
+		Facings: 8
+	die:
+		Start: 176
+		Length: 22
+	icon: stegicnh.shp
+		Scale: 1
+
+trex:
+	Defaults: trex.shp
+		Scale: 5.3333
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+	attack:
+		Start: 80
+		Length: 8
+		Facings: 8
+	die:
+		Start: 144
+		Length: 40
+	icon: trexicnh.shp
+		Scale: 1
+
+tric:
+	Defaults: tric.shp
+		Scale: 5.3333
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+	attack:
+		Start: 80
+		Length: 12
+		Facings: 8
+	die:
+		Start: 176
+		Length: 20
+	icon: tricicnh.shp
+		Scale: 1
+
+rapt:
+	Defaults: rapt.shp
+		Scale: 5.3333
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+	attack:
+		Start: 80
+		Length: 8
+		Facings: 8
+	die:
+		Start: 144
+		Length: 40
+	icon: rapticnh.shp
+		Scale: 1
+
+
+ionsfx:
+	idle: ionsfx.shp
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023
+		Scale: 5.3333
+
+nuke_explosion:
+	nuke_explosion: atomsfx.shp
+		Length: *
+		ZOffset: 2047
+		Scale: 5.3333

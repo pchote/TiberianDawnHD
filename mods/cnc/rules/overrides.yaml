@@ -1,0 +1,56 @@
+^BaseWorld:
+	-TerrainRenderer:
+	RemasterTerrainRenderer:
+	ShroudRenderer:
+		ShroudVariants: shroud
+		OverrideFullShroud: shroud-full
+		FogVariants: fog
+		OverrideFullFog: fog-full
+
+World:
+	LoadWidgetAtGameStart:
+		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
+
+V19:
+	RenderSprites:
+		PlayerPalette: derrick
+
+V19.Husk:
+	RenderSprites:
+		PlayerPalette: derrick
+	WithIdleOverlay:
+		Palette: player
+		IsPlayerPalette: True
+
+^Infantry:
+	WithDeathAnimation:
+		CrushedSequence: die-crushed
+		CrushedSequencePalette: player
+		CrushedPaletteIsPlayerPalette: true
+
+^BaseBuilding:
+	Sellable:
+		Notification: StructureSold
+
+^Palettes:
+	FixedColorShift@rgbaBlueTiberium:
+		BasePalette: bluetiberium
+		Color: 89BAFF
+		MinHue: 0.15
+		MaxHue: 0.35
+		ReferenceHue: 0.23
+		ReferenceSaturation: 0.7
+	ColorPickerColorShift:
+		BasePalette: colorpicker
+	PlayerColorShift:
+		BasePalette: player
+	PlayerColorPalette@derricks:
+		BaseName: derrick
+		BasePalette: terrain
+		RemapIndex: 176, 178, 180, 182, 184, 186, 189, 191, 177, 179, 181, 183, 185, 187, 188, 190
+	PlayerColorShift@derricks:
+		BasePalette: derrick
+		MinHue: 0.05
+		MaxHue: 0.15
+		ReferenceHue: 0.1
+		ReferenceSaturation: 0.75

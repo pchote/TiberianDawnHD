@@ -1,0 +1,78 @@
+Metadata:
+	Title: Remaster Install Prompt
+	Version: {DEV_VERSION}
+	Hidden: true
+
+Packages:
+	^EngineDir
+	$cnccontent: cnccontent
+	^EngineDir|mods/cnc: cnc
+	^EngineDir|mods/modcontent: modcontent
+	^EngineDir|mods/common: common
+	cnc|uibits
+
+Rules:
+	modcontent|rules.yaml
+
+Cursors:
+	modcontent|cursors.yaml
+
+Chrome:
+	cnc|chrome.yaml
+
+Assemblies:
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.Cnc.dll
+	^BinDir|OpenRA.Mods.Mobius.dll
+
+ChromeLayout:
+	cnccontent|prompt.yaml
+
+Notifications:
+	modcontent|notifications.yaml
+
+LoadScreen: RemasterInstallPromptLoadScreen
+	Image: cnc|uibits/chrome.png
+	Image2x: cnc|uibits/chrome-2x.png
+	Image3x: cnc|uibits/chrome-3x.png
+	Text: Loading
+
+ChromeMetrics:
+	common|metrics.yaml
+	modcontent|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+
+SoundFormats:
+
+SpriteFormats: PngSheet
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: DefaultSpriteSequence
+
+ModelSequenceFormat: PlaceholderModelSequence

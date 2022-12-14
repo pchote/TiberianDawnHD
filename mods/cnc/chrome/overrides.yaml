@@ -1,0 +1,4 @@
+Background@COLOR_CHOOSER:
+	Children:
+		ActorPreview@PREVIEW:
+			Scale: 0.3333

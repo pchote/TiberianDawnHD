@@ -1,0 +1,288 @@
+Metadata:
+	Title: Tiberian Dawn HD
+	Version: {DEV_VERSION}
+	Website: https://www.openra.net
+	WebIcon32: https://www.openra.net/images/icons/cnc_32x32.png
+	WindowTitle: OpenRA - Tiberian Dawn
+
+PackageFormats: Mix, MegV3
+
+Packages:
+	^EngineDir
+	$cnc: cnc
+	^EngineDir|mods/cnc: base
+	^EngineDir|mods/common: common
+
+RemasterModContent:
+	RemasterDataMount: data
+	Packages:
+		data|CNCDATA/TIBERIAN_DAWN/CD1/CONQUER.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/SOUNDS.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/TEMPICNH.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/TEMPERAT.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/WINTER.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/DESERT.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD1/MOVIES.MIX
+		data|CNCDATA/TIBERIAN_DAWN/CD2/MOVIES.MIX
+		data|TEXTURES_TD_SRGB.MEG
+		data|TEXTURES_COMMON_SRGB.MEG
+		data|SFX2D_EN-US.MEG
+		data|MUSIC.MEG
+		base|bits/snow.mix
+		base|bits
+		base|bits/jungle
+		base|bits/desert
+		base|bits/ss
+		base|scripts
+		base|uibits
+		cnc|bits
+		common|scripts
+
+MapFolders:
+	base|maps: System
+	~^SupportDir|maps/base/{DEV_VERSION}: User
+
+Rules:
+	base|rules/misc.yaml
+	base|rules/ai.yaml
+	base|rules/player.yaml
+	base|rules/world.yaml
+	base|rules/palettes.yaml
+	base|rules/defaults.yaml
+	base|rules/structures.yaml
+	base|rules/infantry.yaml
+	base|rules/vehicles.yaml
+	base|rules/trees.yaml
+	base|rules/civilian.yaml
+	base|rules/civilian-desert.yaml
+	base|rules/tech.yaml
+	base|rules/ships.yaml
+	base|rules/aircraft.yaml
+	base|rules/husks.yaml
+	cnc|rules/overrides.yaml
+
+Sequences:
+	cnc|sequences/structures.yaml
+	cnc|sequences/vehicles.yaml
+	cnc|sequences/infantry.yaml
+	cnc|sequences/aircraft.yaml
+	cnc|sequences/decorations.yaml
+	cnc|sequences/civilian.yaml
+	cnc|sequences/campaign.yaml
+	cnc|sequences/misc.yaml
+	# Replace morevram with lessvram to save ~512MB VRAM
+	cnc|sequences/morevram.yaml
+	#cnc|sequences/lessvram.yaml
+
+TileSets:
+	cnc|tilesets/desert.yaml
+	cnc|tilesets/winter.yaml
+	cnc|tilesets/snow.yaml
+	cnc|tilesets/temperat.yaml
+	cnc|tilesets/jungle.yaml
+
+Weapons:
+	base|weapons/explosions.yaml
+	base|weapons/ballistics.yaml
+	base|weapons/missiles.yaml
+	base|weapons/other.yaml
+	base|weapons/smallcaliber.yaml
+	base|weapons/superweapons.yaml
+	cnc|weapons/overrides.yaml
+
+Cursors:
+	base|cursors.yaml
+
+Chrome:
+	base|chrome.yaml
+
+Assemblies:
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.Cnc.dll
+	^BinDir|OpenRA.Mods.Mobius.dll
+
+ChromeLayout:
+	cnc|chrome/mainmenu.yaml
+	cnc|chrome/mainmenu-prerelease-notification.yaml
+	base|chrome/mainmenu-prompts.yaml
+	base|chrome/playerprofile.yaml
+	base|chrome/multiplayer-browser.yaml
+	base|chrome/multiplayer-browserpanels.yaml
+	base|chrome/multiplayer-createserver.yaml
+	base|chrome/multiplayer-directconnect.yaml
+	base|chrome/lobby.yaml
+	base|chrome/lobby-mappreview.yaml
+	base|chrome/lobby-players.yaml
+	base|chrome/lobby-options.yaml
+	base|chrome/lobby-music.yaml
+	base|chrome/lobby-servers.yaml
+	base|chrome/lobby-kickdialogs.yaml
+	base|chrome/connection.yaml
+	base|chrome/color-picker.yaml
+	base|chrome/mapchooser.yaml
+	base|chrome/replaybrowser.yaml
+	base|chrome/gamesave-browser.yaml
+	base|chrome/gamesave-loading.yaml
+	base|chrome/ingame.yaml
+	base|chrome/ingame-chat.yaml
+	common|chrome/ingame-transients.yaml
+	base|chrome/ingame-menu.yaml
+	base|chrome/ingame-debug.yaml
+	base|chrome/ingame-infochat.yaml
+	base|chrome/ingame-info.yaml
+	base|chrome/ingame-infobriefing.yaml
+	base|chrome/ingame-infoscripterror.yaml
+	base|chrome/ingame-infoobjectives.yaml
+	base|chrome/ingame-infostats.yaml
+	base|chrome/ingame-info-lobby-options.yaml
+	base|chrome/ingame-debuginfo.yaml
+	base|chrome/music.yaml
+	base|chrome/settings.yaml
+	base|chrome/settings-display.yaml
+	base|chrome/settings-audio.yaml
+	base|chrome/settings-input.yaml
+	base|chrome/settings-hotkeys.yaml
+	base|chrome/settings-advanced.yaml
+	base|chrome/credits.yaml
+	base|chrome/dialogs.yaml
+	base|chrome/tooltips.yaml
+	base|chrome/assetbrowser.yaml
+	base|chrome/missionbrowser.yaml
+	base|chrome/editor.yaml
+	common|chrome/text-notifications.yaml
+
+Translations:
+	common|languages/en.ftl
+
+Voices:
+	cnc|audio/voices.yaml
+
+Notifications:
+	cnc|audio/notifications.yaml
+
+Music:
+	cnc|audio/music.yaml
+
+Hotkeys:
+	common|hotkeys/game.yaml
+	common|hotkeys/observer.yaml
+	common|hotkeys/production-common.yaml
+	common|hotkeys/production-peractor.yaml
+	common|hotkeys/supportpowers.yaml
+	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
+	base|hotkeys.yaml
+
+LoadScreen: RemasterLoadScreen
+	Image: base|uibits/chrome.png
+	Image2x: base|uibits/chrome-2x.png
+	Image3x: base|uibits/chrome-3x.png
+	Text: Loading
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	base|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Small:
+		Font: common|FreeSans.ttf
+		Size: 12
+		Ascender: 9
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size: 32
+		Ascender: 24
+
+Missions:
+	base|missions.yaml
+
+MapGrid:
+	TileSize: 128,128
+	Type: Rectangular
+	EnableFrameBufferDownscale: true
+
+DefaultOrderGenerator: UnitOrderGenerator
+
+SupportsMapsFrom: cnc
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: Tga, ShpTD, TmpTD, ShpTS, TmpRA, ShpRemastered, Dds
+
+VideoFormats: Vqa
+
+TerrainFormat: RemasterTerrain
+
+SpriteSequenceFormat: ClassicSpriteSequence
+
+ModelSequenceFormat: PlaceholderModelSequence
+
+AssetBrowser:
+	SpriteExtensions: .shp, .tem, .win, .sno, .des, .jun .ZIP
+	AudioExtensions: .aud, .wav, .v00, .v01, .v02, .v03, .var
+	VideoExtensions: .vqa, .wsa
+
+GameSpeeds:
+	DefaultSpeed: default
+	Speeds:
+		slowest:
+			Name: slowest
+			Timestep: 80
+			OrderLatency: 2
+		slower:
+			Name: slower
+			Timestep: 50
+			OrderLatency: 3
+		default:
+			Name: normal
+			Timestep: 40
+			OrderLatency: 3
+		fast:
+			Name: fast
+			Timestep: 35
+			OrderLatency: 4
+		faster:
+			Name: faster
+			Timestep: 30
+			OrderLatency: 4
+		fastest:
+			Name: fastest
+			Timestep: 20
+			OrderLatency: 6
+
+ModContent:
+
+DiscordService:
+	ApplicationId: 699223250181292033

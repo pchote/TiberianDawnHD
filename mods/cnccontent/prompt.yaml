@@ -1,0 +1,73 @@
+Container@PROMPT_CONTAINER:
+	Width: WINDOW_RIGHT
+	Height: WINDOW_BOTTOM
+	Logic: RemasterContentPromptLogic
+	Children:
+		Container@SHELLMAP_DECORATIONS:
+			Children:
+				Image@NOD:
+					X: WINDOW_RIGHT / 2 - 384
+					Y: (WINDOW_BOTTOM - 256) / 2
+					ImageCollection: logos
+					ImageName: nod-load
+				Image@GDI:
+					X: WINDOW_RIGHT / 2 + 128
+					Y: (WINDOW_BOTTOM - 256) / 2
+					ImageCollection: logos
+					ImageName: gdi-load
+		Image@EVA:
+			X: WINDOW_RIGHT - 128 - 43
+			Y: 43
+			Width: 128
+			Height: 64
+			ImageCollection: logos
+			ImageName: eva
+		Label@VERSION_LABEL:
+			X: WINDOW_RIGHT - 128 - 43
+			Y: 116
+			Width: 128
+			Align: Center
+			Shadow: true
+		Background@BORDER:
+			Width: WINDOW_RIGHT
+			Height: WINDOW_BOTTOM
+			Background: shellmapborder
+		Container@PROMPT_PANEL:
+			X: (WINDOW_RIGHT - WIDTH) / 2
+			Y: (WINDOW_BOTTOM - 90) / 2
+			Width: 600
+			Height: 105
+			Children:
+				Label@TITLE:
+					Width: PARENT_RIGHT
+					Y: 0 - 22
+					Font: BigBold
+					Contrast: true
+					Align: Center
+					Text: Install Content
+				Background@bg:
+					Width: PARENT_RIGHT
+					Height: 70
+					Background: panel-black
+					Children:
+						Label@DESC_A:
+							Y: (PARENT_BOTTOM - HEIGHT) / 2 - 10
+							Width: PARENT_RIGHT
+							Height: 25
+							Text: Tiberian Dawn requires artwork and audio from the C&C Remastered Collection.
+							Font: Bold
+							Align: Center
+						Label@DESC_B:
+							Y: (PARENT_BOTTOM - HEIGHT) / 2 + 10
+							Width: PARENT_RIGHT
+							Height: 25
+							Text: Please purchase and install the collection through Steam or Origin and try again.
+							Font: Bold
+							Align: Center
+				Button@QUIT_BUTTON:
+					X: PARENT_RIGHT - 140
+					Y: 69
+					Width: 140
+					Height: 35
+					Text: Quit
+					Key: escape

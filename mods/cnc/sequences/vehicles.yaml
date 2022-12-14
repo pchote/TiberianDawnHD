@@ -1,0 +1,366 @@
+mcv:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MCV.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: mcvicnh.tem
+
+mcv.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MCV.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+harv:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\HARV.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	harvest:
+		Start: 32
+		Length: 4
+		Facings: 8
+		Tick: 60
+	dock: harvdump.shp
+		Length: 7
+		Scale: 5.3333
+	dock-loop: harvdump.shp
+		Start: 7
+		Scale: 5.3333
+	icon: harvicnh.tem
+
+harv.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\HARV.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+bggy:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BGGY.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	icon: bggyicnh.tem
+
+bggy.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BGGY.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+mtnk:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\GUNFIRE.ZIP
+		Length: *
+	icon: mtnkicnh.tem
+
+mtnk.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BGGY.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+ltnk:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\LTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\GUNFIRE.ZIP
+		Length: *
+	icon: ltnkicnh.tem
+
+ltnk.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\LTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+htnk:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\HTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\GUNFIRE.ZIP
+		Length: *
+	icon: htnkicnh.tem
+
+htnk.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\HTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+jeep:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\JEEP.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	icon: jeepicnh.tem
+
+jeep.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\JEEP.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+bike:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BIKE.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: bikeicnh.tem
+
+bike.destroyed:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BIKE.ZIP
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+ftnk:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\FTNK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	muzzle:
+		Combine:
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-N.ZIP:
+				Length: *
+				Offset: 16,32
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-NW.ZIP:
+				Length: *
+				Offset: 43,37
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-W.ZIP:
+				Length: *
+				Offset: 43,11
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-SW.ZIP:
+				Length: *
+				Offset: 37,-11
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-S.ZIP:
+				Length: *
+				Offset: 16,-11
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-SE.ZIP:
+				Length: *
+				Offset: -27,-11
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-E.ZIP:
+				Length: *
+				Offset: -37,11
+			DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\FLAME-NE.ZIP:
+				Length: *
+				Offset: -37,43
+		Facings: 8
+		Length: 13
+	icon: ftnkicnh.tem
+
+ftnk.destroyed:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\FTNK.ZIP
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+mhq:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MHQ.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	spinner:
+		Start: 32
+		Length: 32
+	icon: mhqicnh.shp
+
+msam:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MSAM.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	empty-aim:
+		Start: 64
+		Facings: 32
+		UseClassicFacings: True
+	aim:
+		Start: 64
+		Facings: 32
+		UseClassicFacings: True
+	icon: msamicnh.tem
+
+msam.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MSAM.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+mlrs:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MLRS.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+	turret1:
+		Start: 64
+		Facings: 32
+		UseClassicFacings: True
+	turret0:
+		Start: 96
+		Facings: 32
+		UseClassicFacings: True
+	icon: mlrsicnh.tem
+
+mlrs.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\MLRS.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret:
+		Start: 32
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+stnk:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\STNK.ZIP
+		Facings: 32
+		UseClassicFacings: True
+	icon: stnkicnh.tem
+
+stnk.destroyed:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\STNK.ZIP
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+arty:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\ARTY.ZIP
+		Facings: 32
+		UseClassicFacings: True
+	muzzle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\GUNFIRE.ZIP
+		Length: *
+	icon: artyicnh.tem
+
+arty.destroyed:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BIKE.ZIP
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+
+apc:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\APC.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	turret: apctur.shp
+		Facings: 32
+		Scale: 5.3333
+	turret-air: apctur.shp
+		Start: 32
+		Facings: 32
+		Scale: 5.3333
+	muzzle: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	muzzle-air: DATA\ART\TEXTURES\SRGB\COMMON\VFX\MINIGUN.ZIP
+		Length: 6
+		Facings: 8
+	close:
+		Start: 32
+		Length: 3
+	unload:
+		Start: 32
+	icon: apcicnh.tem
+
+apc.destroyed:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\APC.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512
+	turret: apctur.shp
+		Facings: 32
+		ZOffset: -512
+		Scale: 5.3333
+
+truck:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\TRUK.ZIP
+	idle:
+		Facings: 32
+		UseClassicFacings: True
+	icon: truckicon.shp
+
+truck.destroyed:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\TRUK.ZIP
+		Facings: 32
+		UseClassicFacings: True
+		ZOffset: -512

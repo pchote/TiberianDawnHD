@@ -1,0 +1,35 @@
+lst:
+	idle: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\LST.ZIP
+		Facings: 1
+		ZOffset: -1024
+	icon: lsticnh.tem
+
+boat:
+	Defaults: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\UNITS\BOAT.ZIP
+	left:
+		Facings: 32
+	damaged-left:
+		Start: 32
+		Facings: 32
+	critical-left:
+		Start: 64
+		Facings: 32
+	wake-left: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\WAKE.ZIP
+		Start: 6
+		Length: 6
+		Offset: 1,2
+		Tick: 120
+	right:
+		Start: 96
+		Facings: 32
+	damaged-right:
+		Start: 128
+		Facings: 32
+	critical-right:
+		Start: 160
+		Facings: 32
+	wake-right: DATA\ART\TEXTURES\SRGB\TIBERIAN_DAWN\VFX\WAKE.ZIP
+		Length: 6
+		Offset: -1,2
+		Tick: 120
+	icon: boaticnh.tem
