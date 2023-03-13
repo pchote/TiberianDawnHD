@@ -42,7 +42,7 @@ namespace OpenRA.Mods.Mobius.Traits
 		public void LoadPlayerPalettes(WorldRenderer wr, string playerName, Color color, bool replaceExisting)
 		{
 			if (info.PlayerIndex.TryGetValue(playerName, out var shift))
-				wr.SetPaletteColorShift(info.BasePalette + playerName, shift[0], shift[1], shift[2], shift[3]);
+				wr.SetPaletteColorShift(info.BasePalette + playerName, shift[0], shift[1], shift[2], shift[3], shift[4]);
 		}
 	}
 }

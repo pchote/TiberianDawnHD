@@ -37,37 +37,46 @@ namespace OpenRA.Mods.Mobius.Traits
 		[Desc("Saturation reference for the color shift.")]
 		public readonly float ReferenceSaturation = 0.925f;
 
+		[Desc("Value reference for the color shift.")]
+		public readonly float ReferenceValue = 0.95f;
+
 		public override object Create(ActorInitializer init) { return new ColorPickerColorShift(this); }
 	}
 
 	class ColorPickerColorShift : ILoadsPalettes, ITickRender
 	{
 		readonly ColorPickerColorShiftInfo info;
-		readonly ColorPickerManagerInfo colorManager;
+		readonly IColorPickerManagerInfo colorManager;
 		Color color;
 
 		public ColorPickerColorShift(ColorPickerColorShiftInfo info)
 		{
 			// All users need to use the same TraitInfo instance, chosen as the default mod rules
-			colorManager = Game.ModData.DefaultRules.Actors[SystemActors.World].TraitInfo<ColorPickerManagerInfo>();
+			colorManager = Game.ModData.DefaultRules.Actors[SystemActors.World].TraitInfo<IColorPickerManagerInfo>();
 			this.info = info;
 		}
 
 		void ILoadsPalettes.LoadPalettes(WorldRenderer wr)
 		{
-			color = colorManager.Color;
-			var (_, h, s, _) = color.ToAhsv();
-			wr.SetPaletteColorShift(info.BasePalette, h - info.ReferenceHue, s - info.ReferenceSaturation, info.MinHue, info.MaxHue);
+			color = colorManager.ColorPickerPaletteColor;
+			var (r, g, b) = color.ToLinear();
+			var (h, s, v) = Color.RgbToHsv(r, g, b);
+			wr.SetPaletteColorShift(info.BasePalette,
+				h - info.ReferenceHue, s - info.ReferenceSaturation, v / info.ReferenceValue,
+				info.MinHue, info.MaxHue);
 		}
 
 		void ITickRender.TickRender(WorldRenderer wr, Actor self)
 		{
-			if (color == colorManager.Color)
+			if (color == colorManager.ColorPickerPaletteColor)
 				return;
 
-			color = colorManager.Color;
-			var (_, h, s, _) = color.ToAhsv();
-			wr.SetPaletteColorShift(info.BasePalette, h - info.ReferenceHue, s - info.ReferenceSaturation, info.MinHue, info.MaxHue);
+			color = colorManager.ColorPickerPaletteColor;
+			var (r, g, b) = color.ToLinear();
+			var (h, s, v) = Color.RgbToHsv(r, g, b);
+			wr.SetPaletteColorShift(info.BasePalette,
+				h - info.ReferenceHue, s - info.ReferenceSaturation, v / info.ReferenceValue,
+				info.MinHue, info.MaxHue);
 		}
 	}
 }

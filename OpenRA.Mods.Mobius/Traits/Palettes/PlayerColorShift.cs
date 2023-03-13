@@ -36,6 +36,9 @@ namespace OpenRA.Mods.Mobius.Traits
 		[Desc("Saturation reference for the color shift.")]
 		public readonly float ReferenceSaturation = 0.925f;
 
+		[Desc("Value reference for the color shift.")]
+		public readonly float ReferenceValue = 0.95f;
+
 		public override object Create(ActorInitializer init) { return new PlayerColorShift(this); }
 	}
 
@@ -50,8 +53,11 @@ namespace OpenRA.Mods.Mobius.Traits
 
 		public void LoadPlayerPalettes(WorldRenderer wr, string playerName, Color color, bool replaceExisting)
 		{
-			var (_, h, s, _) = color.ToAhsv();
-			wr.SetPaletteColorShift(info.BasePalette + playerName, h - info.ReferenceHue, s - info.ReferenceSaturation, info.MinHue, info.MaxHue);
+			var (r, g, b) = color.ToLinear();
+			var (h, s, v) = Color.RgbToHsv(r, g, b);
+			wr.SetPaletteColorShift(info.BasePalette + playerName,
+			h - info.ReferenceHue, s - info.ReferenceSaturation, v / info.ReferenceValue,
+			info.MinHue, info.MaxHue);
 		}
 	}
 }
